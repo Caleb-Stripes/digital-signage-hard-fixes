@@ -1,0 +1,42 @@
+html, body {
+    height: 100%;
+    margin: 0px;
+    background: #333;
+  }
+
+  .container {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+  }
+  #error-overlay, #cookie-overlay, #timeout-overlay, #queue-overlay, #init-overlay, #disconnected-overlay {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    background: #eee;
+    color: #333;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    text-align: center;
+    padding-top: 20vh;
+    font-family: sans-serif;
+  }
+  #error-overlay, #cookie-overlay, #timeout-overlay, #queue-overlay, #disconnected-overlay {
+    display: none;
+  }
+  .button {
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .button img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    position: relative;
+  }
+  .button img.noclick {
+    cursor: default;
+  }

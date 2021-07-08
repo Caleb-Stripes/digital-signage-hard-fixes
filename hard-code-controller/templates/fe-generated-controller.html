@@ -6,51 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Community Hub Remote Controller</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-  <style>
-    html, body {
-      height: 100%;
-      margin: 0px;
-      background: #333;
-    }
-
-    .container {
-      height: 100vh;
-      width: 100vw;
-      position: relative;
-    }
-    #error-overlay, #cookie-overlay, #timeout-overlay, #queue-overlay, #init-overlay, #disconnected-overlay {
-      height: 100vh;
-      width: 100vw;
-      position: absolute;
-      background: #eee;
-      color: #333;
-      top: 0;
-      left: 0;
-      z-index: 100;
-      text-align: center;
-      padding-top: 20vh;
-      font-family: sans-serif;
-    }
-    #error-overlay, #cookie-overlay, #timeout-overlay, #queue-overlay, #disconnected-overlay {
-      display: none;
-    }
-    .button {
-      display: inline-flex;
-      flex-flow: row wrap;
-      justify-content: center;
-      align-items: center;
-    }
-    .button img {
-      width: 100%;
-      height: 100%;
-      cursor: pointer;
-      position: relative;
-    }
-    .button img.noclick {
-      cursor: default;
-    }
-  </style>
+  <link rel="stylesheet" href="/hard-code-controller/styles/styles.css">
 </head>
+{# data-type probably refers to the type of button; 1 being direct display to a specific frame, 2 being pause, 3 being play, 4 being reverse and 5 being advance
+	data-id probably refers to the specific frame to be directed to however this would be inconsistent with the reverse, advance and play/pause buttons that also have data-id values #}
 <body>
   <div id="timeout-overlay"><h1>Your time using this remote is up. Try again starting at a later time.</h1></div>
   <div id="queue-overlay"><h1>You are waiting <span id="in-the-queue">in the queue</span>. You will gain access at <span id="a-later-time">a later time</span> at the latest.</h1></div>
@@ -59,9 +18,8 @@
   <div id="init-overlay"><h1>Initializing connection...</h1></div>
   <div id="error-overlay"><h1>Lost connection to display... reconnecting in <span id="remaining">10</span>.</h1><p>If this problem persists, please contact <a href="mailto:mail@communityhub.cloud?subject=Controller 29 loaded at 1623425848 connection error with glsc server">mail@communityhub.cloud</a>.</p></div>
   <div class="container">
-                            
-                           <div class="button" data-twig="btn1" style="height: 25%;width: 50%;transform: translate(0px, 0px)"><img  data-type='1' data-url='' data-id='2421' data-active_src='' data-src='https://glsc.communityhub.cloud/api/legacy/digital-signage/uploads/glsc/60c34e5796aee.svg' src='https://glsc.communityhub.cloud/api/legacy/digital-signage/uploads/glsc/60c34e5796aee.svg' /></div><div class="button" data-twig="btn2" style="height: 25%;width: 50%;transform: translate(0px, 0px)"><img  data-type='1' data-url='' data-id='2422' data-active_src='' data-src='https://glsc.communityhub.cloud/api/legacy/digital-signage/uploads/glsc/60c34edc91151.svg' src='https://glsc.communityhub.cloud/api/legacy/digital-signage/uploads/glsc/60c34edc91151.svg' /></div><div class="button" data-twig="btn3" style="height: 25%;width: 50%;transform: translate(0px, 0px)"><img  data-type='1' data-url='/digital-signage/remote/7' data-id='2423' data-active_src='' data-src='https://glsc.communityhub.cloud/api/legacy/digital-signage/uploads/glsc/waterusebutton_text.svg' src='https://glsc.communityhub.cloud/api/legacy/digital-signage/uploads/glsc/waterusebutton_text.svg' /></div><div class="button" data-twig="btn4" style="height: 25%;width: 50%;transform: translate(0px, 0px)"><img  data-type='1' data-url='' data-id='2424' data-active_src='' data-src='https://glsc.communityhub.cloud/api/legacy/digital-signage/uploads/glsc/renewablebutton_text.svg' src='https://glsc.communityhub.cloud/api/legacy/digital-signage/uploads/glsc/renewablebutton_text.svg' /></div><div class="button" data-twig="btn5" style="height: 25%;width: 50%;transform: translate(0px, 0px)"><img  data-type='1' data-url='' data-id='2425' data-active_src='' data-src='https://glsc.communityhub.cloud/api/legacy/digital-signage/uploads/glsc/60c350c2e87e4.svg' src='https://glsc.communityhub.cloud/api/legacy/digital-signage/uploads/glsc/60c350c2e87e4.svg' /></div><div class="button" data-twig="btn6" style="height: 25%;width: 50%;transform: translate(0px, 0px)"><img  data-type='1' data-url='' data-id='2426' data-active_src='' data-src='https://glsc.communityhub.cloud/api/legacy/digital-signage/uploads/glsc/60c350e2d900f.svg' src='https://glsc.communityhub.cloud/api/legacy/digital-signage/uploads/glsc/60c350e2d900f.svg' /></div><div class="button" data-twig="btn7" style="height: 25%;width: 20%;transform: translate(0px, 0px)"><img  data-type='4' data-url='/digital-signage/remote/7' data-id='2428' data-active_src='' data-src='https://glsc.communityhub.cloud/api/legacy/digital-signage/uploads/glsc/60c352ba45979.svg' src='https://glsc.communityhub.cloud/api/legacy/digital-signage/uploads/glsc/60c352ba45979.svg' /></div><div class="button" data-twig="btn8" style="height: 25%;width: 20%;transform: translate(0px, 0px)"></div><div class="button" data-twig="btn9" style="height: 25%;width: 20%;transform: translate(0px, 0px)"><img  data-type='2' data-url='/digital-signage/remote/7' data-id='748' data-active_src='' data-src='https://glsc.communityhub.cloud/api/legacy/digital-signage/images/pause.svg' src='https://glsc.communityhub.cloud/api/legacy/digital-signage/images/pause.svg' /></div><div class="button" data-twig="btn10" style="height: 25%;width: 20%;transform: translate(0px, 0px)"></div><div class="button" data-twig="btn11" style="height: 25%;width: 20%;transform: translate(0px, 0px)"><img  data-type='5' data-url='/digital-signage/remote/7' data-id='2427' data-active_src='' data-src='https://glsc.communityhub.cloud/api/legacy/digital-signage/uploads/glsc/60c35157dffe7.svg' src='https://glsc.communityhub.cloud/api/legacy/digital-signage/uploads/glsc/60c35157dffe7.svg' /></div>
-                        
+	<div class="button" data-twig="btn1" style="height: 25%;width: 50%;transform: translate(0px, 0px)"><img  data-type='1' data-url='' data-id='2421' data-active_src='' data-src='https://glsc.communityhub.cloud/api/legacy/digital-signage/uploads/glsc/60c34e5796aee.svg' src='https://glsc.communityhub.cloud/api/legacy/digital-signage/uploads/glsc/60c34e5796aee.svg' /></div><div class="button" data-twig="btn2" style="height: 25%;width: 50%;transform: translate(0px, 0px)"><img  data-type='1' data-url='' data-id='2422' data-active_src='' data-src='https://glsc.communityhub.cloud/api/legacy/digital-signage/uploads/glsc/60c34edc91151.svg' src='https://glsc.communityhub.cloud/api/legacy/digital-signage/uploads/glsc/60c34edc91151.svg' /></div><div class="button" data-twig="btn3" style="height: 25%;width: 50%;transform: translate(0px, 0px)"><img  data-type='1' data-url='/digital-signage/remote/7' data-id='2423' data-active_src='' data-src='https://glsc.communityhub.cloud/api/legacy/digital-signage/uploads/glsc/waterusebutton_text.svg' src='https://glsc.communityhub.cloud/api/legacy/digital-signage/uploads/glsc/waterusebutton_text.svg' /></div><div class="button" data-twig="btn4" style="height: 25%;width: 50%;transform: translate(0px, 0px)"><img  data-type='1' data-url='' data-id='2424' data-active_src='' data-src='https://glsc.communityhub.cloud/api/legacy/digital-signage/uploads/glsc/renewablebutton_text.svg' src='https://glsc.communityhub.cloud/api/legacy/digital-signage/uploads/glsc/renewablebutton_text.svg' /></div><div class="button" data-twig="btn5" style="height: 25%;width: 50%;transform: translate(0px, 0px)"><img  data-type='1' data-url='' data-id='2425' data-active_src='' data-src='https://glsc.communityhub.cloud/api/legacy/digital-signage/uploads/glsc/60c350c2e87e4.svg' src='https://glsc.communityhub.cloud/api/legacy/digital-signage/uploads/glsc/60c350c2e87e4.svg' /></div><div class="button" data-twig="btn6" style="height: 25%;width: 50%;transform: translate(0px, 0px)"><img  data-type='1' data-url='' data-id='2426' data-active_src='' data-src='https://glsc.communityhub.cloud/api/legacy/digital-signage/uploads/glsc/60c350e2d900f.svg' src='https://glsc.communityhub.cloud/api/legacy/digital-signage/uploads/glsc/60c350e2d900f.svg' /></div><div class="button" data-twig="btn7" style="height: 25%;width: 20%;transform: translate(0px, 0px)"><img  data-type='4' data-url='/digital-signage/remote/7' data-id='2428' data-active_src='' data-src='https://glsc.communityhub.cloud/api/legacy/digital-signage/uploads/glsc/60c352ba45979.svg' src='https://glsc.communityhub.cloud/api/legacy/digital-signage/uploads/glsc/60c352ba45979.svg' /></div><div class="button" data-twig="btn8" style="height: 25%;width: 20%;transform: translate(0px, 0px)"></div><div class="button" data-twig="btn9" style="height: 25%;width: 20%;transform: translate(0px, 0px)"><img  data-type='2' data-url='/digital-signage/remote/7' data-id='748' data-active_src='' data-src='https://glsc.communityhub.cloud/api/legacy/digital-signage/images/pause.svg' src='https://glsc.communityhub.cloud/api/legacy/digital-signage/images/pause.svg' /></div><div class="button" data-twig="btn10" style="height: 25%;width: 20%;transform: translate(0px, 0px)"></div><div class="button" data-twig="btn11" style="height: 25%;width: 20%;transform: translate(0px, 0px)"><img  data-type='5' data-url='/digital-signage/remote/7' data-id='2427' data-active_src='' data-src='https://glsc.communityhub.cloud/api/legacy/digital-signage/uploads/glsc/60c35157dffe7.svg' src='https://glsc.communityhub.cloud/api/legacy/digital-signage/uploads/glsc/60c35157dffe7.svg' /></div>
+                     
 
                         
 
@@ -336,5 +294,6 @@ const refreshNoClick = () => {
 </script>
 </div>
 </body>
+<script src="/hard-code-controller/scripts/function.js"></script>
 </html>
 
